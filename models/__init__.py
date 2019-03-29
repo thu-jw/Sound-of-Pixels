@@ -46,6 +46,7 @@ class ModelBuilder():
         else:
             raise Exception('Architecture undefined!')
 
+        # applies fn recursively to every submodule as well as self. torch.nn.apply(fn)
         net_sound.apply(self.weights_init)
         if len(weights) > 0:
             print('Loading weights for net_sound')

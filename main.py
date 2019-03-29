@@ -536,6 +536,7 @@ if __name__ == '__main__':
 
     # experiment name
     if args.mode == 'train':
+        # num_mix is the number of sounds to mix
         args.id += '-{}mix'.format(args.num_mix)
         if args.log_freq:
             args.id += '-LogFreq'
